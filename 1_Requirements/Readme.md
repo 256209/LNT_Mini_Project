@@ -23,7 +23,26 @@ There are multiple management system used in medical institutions to work with t
 * Registe memeory to run the software on the system.
 * Technically able workers to use the system efficiently.
 ## Defining Our System
-    -- TBD
+
+Our system is mainly for keeping records of the patients going in the medical institution.It can also work as a primary system for other systems to use as a base for eg medication management by using the record search feature and using the patient's history while also not being limited to only this sub-system.
+
+The modules of our system works to achieve the following results:
+1. Add the patient's record in the system memory.
+    * including the patient's diagnosis
+    * name
+    * age
+    * body features for future references
+    * status of the patient
+    * Doctor's name associated with the patient
+    * Blood group
+    * Diagnosis
+    * other non essential details such as bill payment,date etc
+2. Use the record stored in the system to display
+    * Patient's based on any of the feature stored in structured format in the record
+    * Display the entire record with all the details
+3. Edit the records using any of the features mentioned
+
+
 ## SWOT ANALYSIS
 ![SWOT-Sample](Link to Pic)
 
@@ -31,23 +50,23 @@ There are multiple management system used in medical institutions to work with t
 
 ## Who:
 
-**TBD**
+**Small,medium and large medical intitutions** 
 
 ## What:
 
-**TBD**
+**A system to keep records of patients to make the task easier for the people working in the medical institutions** 
 
 ## When:
 
-**TBD**
+**Everyday throughout the year as its not a part time solution (based on user's choice)**
 
 ## Where:
 
-**TBD**
+**In all the medical institutions**
 
 ## How:
 
-**TBD**
+**Using file handling and structures we keep a structured managed record for the medical institutions to use at any time they need**
 
 # Detail requirements
 ## High Level Requirements:
