@@ -38,7 +38,7 @@ add:	printf("ENTER PATIENT DETAILS\n");
 	fclose(p.fpat);
     
 	FILE *fptr= fopen("records.dat", "ab+");
-	fseek(fptr,-1*sizeof(struct patient),SEEK_END);
+	fseek(fptr,1*sizeof(struct patient),SEEK_END);
 	struct patient dummy;
 	if(fread(&dummy,sizeof(struct patient),1,fptr)!=0)
 		p.pid=dummy.pid+1;
