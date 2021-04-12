@@ -44,7 +44,7 @@ The modules of our system works to achieve the following results:
 
 
 ## SWOT ANALYSIS
-![SWOT-Sample](Link to Pic)
+![SWOT-ANALYSIS](https://github.com/256209/LNT_Mini_Project/blob/main/1_Requirements/swot.PNG)
 
 # 4W&#39;s and 1&#39;H
 
