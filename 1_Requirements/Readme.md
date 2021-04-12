@@ -79,5 +79,16 @@ The modules of our system works to achieve the following results:
  | HR04 | Delete records | Delete records after searching them up with a certain field usually advised against |
 
 ##  Low level Requirements:
---- TBD in Tabular Format 
--- ID | Description | Status (Implemented/Future)
+
+| ID | function | Description |
+| --- | --- | ---|
+| LR01 | add_patient | Function to add the patient record to the system |
+| LR02 | bloodgroup | Function to add,search,edit based on bloodgroup of the patient |
+| LR03 | delete | Function to delete the patient record from the system |
+| LR04 | diagnosis | Function to add the diagnosis of patient to the system |
+| LR05 | display | Function to display the patient record from the system |
+| LR06 | doctor | Function to operate on the record of the patient using doctor field in the system |
+| LR07 | edit | Function to edit the patient record in the system |
+| LR08 | log_patient | Function to record the log date of the patient to the system |
+| LR09 | print | Function to print the patient record stored in the system |
+| LR10 | search | Function to search a record of patient or patients depending on the case |
