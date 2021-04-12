@@ -72,6 +72,7 @@ The modules of our system works to achieve the following results:
 ## High Level Requirements:
  
  |ID | Description | Status (Implemented/Future) |
+ | ----- | ----- | ----- |
  | HR01 | Add records | To create and add records in the system |
  | HR02 | Search records | Use different fields as stored previously as search components for specific records or display the entire record |
  | HR03 | Edit records | Edit records after searching them up with a certain field (important for dynamic records of patients) |
