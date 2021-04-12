@@ -5,7 +5,7 @@
 
 
 ## Research
-![Description](Link to Pic)
+![Management_Services](https://github.com/256209/LNT_Mini_Project/blob/main/1_Requirements/Management.PNG)
 ### History
 As we all know management system was the trend to help institutions focus on ther job and what better place to use that than medical institutions where we want the essential workers to focus on their work rather than those tedious tasks so that they can be more productive while paying less heed to things that can be easily managed using a system.
 There are multiple management system used in medical institutions to work with things like managing the funds,the salary for the workers,keeping tabs on the schedule of the workers,keeping the records of the patient in the hospital and their medical history,etc.These are done using multiple platforms,frameworks with different management plans.Models with more efficiency as well as models with more flexibility are present each of them have a differne feature they focus on and integrate themselves in the environment and each successful model fuels the next better model.
