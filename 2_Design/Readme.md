@@ -16,4 +16,4 @@
 
 
 ##STATE MACHINE DIAGRAM
-![State Machine Diagram](Link to Pic)
+![State Machine Diagram](https://github.com/256209/LNT_Mini_Project/blob/main/2_Design/statemachine.PNG)
