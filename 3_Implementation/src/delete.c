@@ -3,6 +3,7 @@
 #include "search.h" 
 #include<string.h>
 #include "printname_pid.h"
+#include "delete.h"
 int delete()
 {
     		char s[100];
