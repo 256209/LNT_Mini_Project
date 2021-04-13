@@ -13,7 +13,7 @@ void lower(char *upr, char *low)
 
 int diagnosis()
 {
-	char c,di[100];
+	char yn,c,di[100];
 	while((c=getchar())!='\n')
 			;
 diag:	printf("Enter diagnosis: ");
