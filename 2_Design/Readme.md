@@ -11,6 +11,9 @@
 
 ## Low Level Design 
 
---- TBD Structural and Behavioural Diagram
-![FeaturesLevelStructuralDiagram](Link to Pic)
-![FeaturesBehaviouralDiagram](Link to Pic)
+##ACTIVITY DIAGRAM
+![Activity Diagram](https://github.com/256209/LNT_Mini_Project/blob/main/2_Design/activity%20diagram.PNG)
+
+
+##STATE MACHINE DIAGRAM
+![State Machine Diagram](Link to Pic)
