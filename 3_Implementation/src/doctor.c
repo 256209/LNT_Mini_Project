@@ -7,7 +7,7 @@
 
 int doctor()
 {
-	char c,d_name[100];
+	char yn,c,d_name[100];
 	while((c=getchar())!='\n')
 		;
 again:	printf("Enter doctor's name: ");
@@ -39,6 +39,13 @@ again:	printf("Enter doctor's name: ");
 		printf("Doctor not found.\n");
 		fclose(doc);
 		fclose(fptr);
+			printf("\nDoctor not found. Try again!\n");
+			printf("Do you want to go to main menu?(Y/N): ");
+			scanf("%c", &yn);
+			if(yn=='Y' || yn=='y')
+			{
+				return 0;
+			}
 		goto again;
 	}
 	else
