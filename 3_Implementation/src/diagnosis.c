@@ -45,6 +45,13 @@ diag:	printf("Enter diagnosis: ");
 		printf("No records found.\n");
 		fclose(diag);
 		fclose(fptr);
+			printf("\nDiag not found. Try again!\n");
+			printf("Do you want to go to main menu?(Y/N): ");
+			scanf("%c", &yn);
+			if(yn=='Y' || yn=='y')
+			{
+				return 0;
+			}
 		goto diag;
 	}
 	else
