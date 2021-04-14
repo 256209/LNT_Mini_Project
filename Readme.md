@@ -1,6 +1,6 @@
-# SDLC Activity Based Learning
+# SDLC Activity Based Learning Project
 
-Visit [Pages for Report -optional](using github.io option)
+
 
 Build | Code Quality | Unity | [Git Inspector](using github.io option)
 ------|----------|-------|--------------
