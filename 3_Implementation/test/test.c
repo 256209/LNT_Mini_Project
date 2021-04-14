@@ -28,7 +28,7 @@ void tearDown()
  */
 void checkdeleteoption()
 {
-    TEST_ASSERT_EQUAL(0,delete1());
+    TEST_ASSERT_EQUAL(0,delete());
 }
 
 //test cases to check the SEARCH FUNCTIONS
