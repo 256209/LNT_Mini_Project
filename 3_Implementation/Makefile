@@ -5,7 +5,7 @@ BUILD = build
 $(BUILD):
 	mkdir build
 CC=gcc
-
+COV_SRC = test.c
 SRC=src/add_patient.c\
 	src/bgrp.c\
 	src/delete.c\
@@ -21,7 +21,6 @@ TEST_SRC=test/test.c\
 unity/unity.c
 INC_H=inc
 INC_T=unity
-
 .PHONY: run clean test doc all
 ifdef OS
    RM = del
@@ -47,8 +46,14 @@ test:$(BUILD)
 	gcc $(SRC) $(TEST_SRC) -I$(INC_T) -I$(INC_H) -o $(TEST_OUTPUT)
 	./$(TEST_OUTPUT)
 
-
-
+coverageCheck:$(BUILD)
+	g++ -fprofile-arcs -ftest-coverage -fPIC -O0 $(TEST_SRC) $(SRC) -I$(INC_H) -I$(INC_T) -o $(TEST_OUTPUT)
+	./$(TEST_OUTPUT)
+	gcov -a $(COV_SRC)
+	$(RM) *.$(EXEC)
+	$(RM) *.gcda
+	$(RM) *.gcno
+	$(RM) *.c.gcov
+	$(RM) test.c	
 clean:
 	$(RM) *.$(EXEC)
-	
