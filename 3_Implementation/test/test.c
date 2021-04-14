@@ -8,7 +8,7 @@
 #include "diagnosis.h"
 #include "doctor.h"
 #include "log.h"
-#include "print.h"
+#include"print.h"
 //Required by unity framework
 void setUp()
 {
@@ -28,7 +28,7 @@ void tearDown()
  */
 void checkdeleteoption()
 {
-    TEST_ASSERT_EQUAL(0,delete());
+    TEST_ASSERT_EQUAL(0,delete1());
 }
 
 //test cases to check the SEARCH FUNCTIONS
