@@ -21,7 +21,7 @@ TEST_SRC=test/test.c\
 unity/unity.c
 INC_H=inc
 INC_T=unity
-COV_SRC = test.c
+
 .PHONY: run clean test doc all
 ifdef OS
    RM = del /q
@@ -47,11 +47,7 @@ test:$(BUILD)
 	gcc $(SRC) $(TEST_SRC) -I$(INC_T) -I$(INC_H) -o $(TEST_OUTPUT)
 	./$(TEST_OUTPUT)
 
-coverageCheck:$(BUILD)
-	cp test/test.c .
-	gcc -fprofile-arcs -ftest-coverage $(TEST_SRC) $(SRC) -I $(INC_H) -I $(INC_T) -o $(TEST_OUTPUT)
-	./$(TEST_OUTPUT)
-	gcov -a $(COV_SRC)
+
 
 clean:
 	$(RM) *.$(EXEC)
