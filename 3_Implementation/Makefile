@@ -49,7 +49,7 @@ test:$(BUILD)
 
 coverageCheck:$(BUILD)
 	cp test/test.c .
-	gcc -fprofile-arcs -ftest-coverage -fPIC -O0 $(TEST_SRC) $(SRC) -I $(INC_H) -I $(INC_T) -o $(TEST_OUTPUT)
+	gcc -fprofile-arcs -ftest-coverage $(TEST_SRC) $(SRC) -I $(INC_H) -I $(INC_T) -o $(TEST_OUTPUT)
 	./$(TEST_OUTPUT)
 	gcov -a $(COV_SRC)
 
