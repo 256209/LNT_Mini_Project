@@ -8,7 +8,7 @@
 #include "diagnosis.h"
 #include "doctor.h"
 #include "log.h"
-
+#include "print.h"
 //Required by unity framework
 void setUp()
 {
@@ -21,29 +21,30 @@ void tearDown()
 
 }
 
-//test cases to check if the DELETE functions are working fine or not
+
+/**
+ * @brief test cases to check if the DELETE functions are working fine or not
+ * 
+ */
 void checkdeleteoption()
 {
-    struct patient p
-    struct patient p1;
-
-    TEST_ASSERT_EQUAL(0,0);
+    TEST_ASSERT_EQUAL(0,delete());
 }
 
 //test cases to check the SEARCH FUNCTIONS
 void checksearchfunction(){
    
     int date[3]={222};
-    // TEST_ASSERT_EQUAL(0,diagnosis());
-    // TEST_ASSERT_EQUAL(0,doctor());
+    TEST_ASSERT_EQUAL(0,diagnosis());
+    TEST_ASSERT_EQUAL(0,doctor());
     TEST_ASSERT_EQUAL(0,log_patient(0, date));
 }
 int main()
 {
     UNITY_BEGIN();
 
-    //Run commands
-    // RUN_TEST(checkdeleteoption);
+    // Run commands
+    RUN_TEST(checkdeleteoption);
     RUN_TEST(checksearchfunction);
 
     return UNITY_END();
