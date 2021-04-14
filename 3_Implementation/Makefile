@@ -24,7 +24,7 @@ INC_T=unity
 
 .PHONY: run clean test doc all
 ifdef OS
-   RM = del /q
+   RM = del
    FixPath = $(subst /,\,$1)
    EXEC = exe
 else
