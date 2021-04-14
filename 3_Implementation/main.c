@@ -52,7 +52,7 @@ menu:	menu();
 	}
 	else if(option==5)
 	{
-        	if(delete()==0)
+        	if(delete1()==0)
         		goto menu;
 	}
 	else if(option == 6)
