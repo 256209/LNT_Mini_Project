@@ -1,3 +1,7 @@
+/**
+ * @brief Structure patient with variables including name,pid,age,sex,doc,diag,height,weight,bgrp,stat,bill,amtdeep,file pointer
+ * 
+ */
 struct patient
  {
     char name[100];
