@@ -18,6 +18,8 @@ SRC=src/add_patient.c\
 	src/printname_pid.c\
 	src/search.c
 TEST_SRC=test/test.c\
+src/log.c\
+src/print.c\
 unity/unity.c
 INC_H=inc
 INC_T=unity
@@ -44,7 +46,7 @@ run: all
 	./$(PROJECT_OUTPUT)
 
 test:$(BUILD)
-	gcc $(SRC) $(TEST_SRC) -I$(INC_T) -I$(INC_H) -o $(TEST_OUTPUT)
+	gcc $(TEST_SRC) -I$(INC_T) -I$(INC_H) -o $(TEST_OUTPUT)
 	./$(TEST_OUTPUT)
 
 
