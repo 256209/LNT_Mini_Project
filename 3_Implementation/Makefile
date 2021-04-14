@@ -2,7 +2,8 @@ PROJ_NAME = Hospital_record_system
 # Output directory
 BUILD = build
 
-
+$(BUILD):
+	mkdir build
 CC=gcc
 
 SRC=src/add_patient.c\
@@ -38,7 +39,7 @@ PROJECT_OUTPUT = $(BUILD)/$(PROJ_NAME).$(EXEC)
 all:$(BUILD)
 	$(CC) -I$(INC_H) $(SRC) main.c -o $(PROJECT_OUTPUT)
 
-run: 
+run: all
 	./$(PROJECT_OUTPUT)
 
 test:$(BUILD)
