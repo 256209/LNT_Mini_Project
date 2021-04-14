@@ -4,7 +4,7 @@ Visit [Pages for Report -optional](using github.io option)
 
 Build | Code Quality | Unity | [Git Inspector](using github.io option)
 ------|----------|-------|--------------
-
+[![C/C++ CI](https://github.com/256209/LNT_Mini_Project/actions/workflows/c-cpp.yml/badge.svg)](https://github.com/256209/LNT_Mini_Project/actions/workflows/c-cpp.yml) | [![Static Cppcheck](https://github.com/256209/LNT_Mini_Project/actions/workflows/cppcheck.yml/badge.svg)](https://github.com/256209/LNT_Mini_Project/actions/workflows/cppcheck.yml)|--|[![Git Inspector](https://github.com/256209/LNT_Mini_Project/actions/workflows/gitinspector.yml/badge.svg)](https://github.com/256209/LNT_Mini_Project/actions/workflows/gitinspector.yml)
 
 
 ## Folder Structure
