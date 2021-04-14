@@ -44,7 +44,7 @@ run: all
 	./$(PROJECT_OUTPUT)
 
 test:$(BUILD)
-	gcc $(SRC) $(TEST_SRC) -I$(INC_T) -I$(INC_H) -o $(TEST_OUTPUT)
+	gcc $(TEST_SRC) -I$(INC_T) -I$(INC_H) -o $(TEST_OUTPUT)
 	./$(TEST_OUTPUT)
 
 
