@@ -4,7 +4,7 @@
 #include<string.h>
 #include "printname_pid.h"
 #include "delete.h"
-int delete()
+int delete1()
 {
     		char s[100];
 		char ch[100];
