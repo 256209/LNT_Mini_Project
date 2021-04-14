@@ -37,7 +37,7 @@ all:$(BUILD)
 	$(CC) -I$(INC_H) $(SRC) main.c -o $(PROJECT_OUTPUT)
 
 run: 
-	./$(PROJ_OUTPUT).$(EXEC)
+	./$(PROJECT_OUTPUT)
 
 test:$(BUILD)
 	gcc $(SRC) $(TEST_SRC) -I$(INC_T) -I$(INC_H) -o $(TEST_OUTPUT)
