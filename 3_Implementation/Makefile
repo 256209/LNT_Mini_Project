@@ -18,8 +18,8 @@ SRC=src/add_patient.c\
 	src/printname_pid.c\
 	src/search.c
 TEST_SRC=test/test.c\
-src/log.c\
-src/print.c\
+test/log.c\
+test/print.c\
 unity/unity.c
 INC_H=inc
 INC_T=unity
