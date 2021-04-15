@@ -33,7 +33,7 @@ else
 	  EXEC = out
    endif
 endif
-TEST_OUTPUT = $(BUILD)/Test_$(PROJ_NAME).$(EXEC)
+TEST_OUTPUT = Test_$(PROJ_NAME).$(EXEC)
 PROJECT_OUTPUT = $(BUILD)/$(PROJ_NAME).$(EXEC)
 
 all:$(BUILD)
@@ -42,7 +42,7 @@ all:$(BUILD)
 run: all
 	./$(PROJECT_OUTPUT)
 
-test:$(BUILD)
+test:
 	gcc $(SRC) $(TEST_SRC) -I$(INC_T) -I$(INC_H) -o $(TEST_OUTPUT)
 	./$(TEST_OUTPUT)
 
