@@ -55,5 +55,7 @@ coverageCheck:$(BUILD)
 	$(RM) *.gcno
 	$(RM) *.c.gcov
 	$(RM) test.c	
+valgrind:
+	valgrind ./$(TEST_OUTPUT)	
 clean:
 	$(RM) *.$(EXEC)
