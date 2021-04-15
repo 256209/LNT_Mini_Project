@@ -1,16 +1,17 @@
-#include <stdio.h>
-#include<string.h>
 #include<stdlib.h>
+#include <stdio.h>
 #include<ctype.h>
 #include"extern.h"
 #include"print.h"
+#include<string.h>
+
 
 int doctor()
 {
 	char yn,c,d_name[100];
 	while((c=getchar())!='\n')
 		;
-again:	printf("Enter doctor's name: ");
+again:	printf("Enter doctor's name for this patient : ");
 	gets(d_name);
 	FILE* fptr=fopen("records.dat", "rb");
 		
@@ -39,8 +40,8 @@ again:	printf("Enter doctor's name: ");
 		printf("Doctor not found.\n");
 		fclose(doc);
 		fclose(fptr);
-			printf("\nDoctor not found. Try again!\n");
-			printf("Do you want to go to main menu?(Y/N): ");
+		printf("\nDoctor not found. if not in unit test case Try again!\n");
+			printf("Do you want to go to main menu?if in unit test press Y(Y/N): ");
 			scanf("%c", &yn);
 			if(yn=='Y' || yn=='y')
 			{

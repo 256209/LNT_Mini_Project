@@ -1,8 +1,9 @@
 #include <stdio.h>
-#include<string.h>
 #include"extern.h"
 #include <ctype.h>
 #include "print.h"
+#include<string.h>
+
 
 void lower(char *upr, char *low)
 {
@@ -16,7 +17,7 @@ int diagnosis()
 	char yn,c,di[100];
 	while((c=getchar())!='\n')
 			;
-diag:	printf("Enter diagnosis: ");
+diag:	printf("Enter the diagnosis for this record: ");
 	gets(di);
 	FILE* fptr=fopen("records.dat","rb");
 	
@@ -45,8 +46,9 @@ diag:	printf("Enter diagnosis: ");
 		printf("No records found.\n");
 		fclose(diag);
 		fclose(fptr);
-			printf("\nDiag not found. Try again!\n");
-			printf("Do you want to go to main menu?(Y/N): ");
+		
+			printf("\nDiag not found. if not in unit test Try again!\n");
+			printf("Do you want to go to main menu?if used in unit test press Y(Y/N): ");
 			scanf("%c", &yn);
 			if(yn=='Y' || yn=='y')
 			{

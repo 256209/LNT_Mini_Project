@@ -59,7 +59,7 @@ void print(FILE *fptr)
 	}
 	while((c=getchar())!='\n')
 		;
-	printf("\nDo you want more details of all patients?(Y/N): ");
+	printf("\nDo you want more details of all stored records of patients?(Y/N): ");
 	char ans;
 	scanf("%c", &ans);
 	if(ans=='y' ||ans=='Y')
@@ -67,7 +67,7 @@ void print(FILE *fptr)
 		fseek( fptr, 0, SEEK_SET );
 		while (fread(&p, sizeof(p), 1, fptr)==1)
 		{
-			printf("Patient ID(%ld):\n", p.pid);
+			printf("Patient ID:(%ld)\n", p.pid);
 			printf("   Patient's Name: %s\n", p.name);
 			printf("   Doctor's Name : %s\n", p.doc);
 			printf("   Diagnosis     : %s\n", p.diag);
@@ -75,7 +75,7 @@ void print(FILE *fptr)
 	}
 	while((c=getchar())!='\n')
 		;
-	printf("\nDo you want to print the date log of a patient?(Y/N): ");
+	printf("\nDo you want to get the date log of any particular patient/record?(Y/N): ");
 	scanf("%c", &ans);
 
 	while(ans=='y' || ans=='Y')
@@ -102,22 +102,22 @@ void print(FILE *fptr)
 		}
 a:		while((c=getchar())!='\n')
 		;
-		printf("\nDo you want to get the log of another patient? (Y/N): ");
+		printf("\nDo you want to get the date log for another patient? (Y/N): ");
 		scanf("%c", &ans);
 	}
 }
 void menu()
 {
 	printf("\nMain menu:\n");
-	printf("1. Display patient records\n");
-	printf("2. Add patient record\n");
-	printf("3. Search a patient's records in the database\n");  
-	printf("4. Edit patient records\n");
-	printf("5. Delete patient records\n");
-	printf("6. Display patients of a particular blood group\n");
-	printf("7. Display patients treated by a particular doctor\n");
-	printf("8. Display patients of a particular diagnosis\n");
+	printf("1. Display patient records stored\n");
+	printf("2. Add patient record to store them\n");
+	printf("3. Search a stored patient's records in the database\n");  
+	printf("4. Edit patient records in the database\n");
+	printf("5. Delete patient records fromt the database\n");
+	printf("6. Display patients/records of a particular blood group from the database\n");
+	printf("7. Display patients/records treated by a particular doctor from the database\n");
+	printf("8. Display patients of a particular diagnosis from the database\n");
 	printf("9. Display patients who visited on a particular day\n");
-	printf("0. Quit the program\n");
+	printf("0. Leave the program\n");
 }
 

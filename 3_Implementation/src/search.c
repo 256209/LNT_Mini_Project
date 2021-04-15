@@ -1,10 +1,11 @@
 #include<stdio.h>
 #include "extern.h"
 #include "edit.h"
-#include<string.h>
 #include<ctype.h>
 #include "display.h"
 #include "printname_pid.h"
+#include<string.h>
+#include "search.h"
 void name_pid(struct patient p);
 void strlower(char* p,char* c);
 void search(FILE* fptr)

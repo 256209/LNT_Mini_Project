@@ -7,7 +7,7 @@ void edit(/*struct patient *ptr*/)
 	FILE* fptr;
 	int id;
         fptr=fopen("records.dat","rb");
-        printf("Enter patient id:");
+        printf("Enter patient id you want the record for:");
         scanf("%d", &id);
         struct patient pat,ptr;
         while(fread(&ptr,sizeof(ptr),1,fptr))
@@ -21,7 +21,7 @@ void edit(/*struct patient *ptr*/)
 	
 	while((c=getchar())!='\n')
 		;
-	printf("\nWould you like to record the date?(Y/N): ");
+	printf("\nWould you like to add the date for this record?(Y/N): ");
 	scanf("%c",&c);
 	if(c=='Y'||c=='y')
 	{
@@ -41,7 +41,7 @@ void edit(/*struct patient *ptr*/)
 	char dummy0[100];
 	do
 	{
-		printf("\nWhich field of the patient do you want to edit?\n");
+		printf("\nWhich field of the record for the patient do you want to edit on?\n");
 		printf("1.Name\n2.Age\n3.Sex\n4.Doctor\n5.Diagnosis\n6.Height\n7.Weight\n8.BloodGroup\n9.Patient's Status\n10.Bill\n11.Amount Deposited\n");
 		while((c=getchar())!='\n')
 			;
@@ -54,21 +54,21 @@ void edit(/*struct patient *ptr*/)
 	    		case 1:
                    		
                    		strcpy(dummy0,ptr.name);
-                   		printf("Enter the updated name:");
+                   		printf("Enter the updated name for this record:");
 				gets(ptr.name);
                    
                    		rename(dummy0,ptr.name);
 			       break;
 	    		case 2:
-			       printf("Enter the updated Age:");
+			       printf("Enter the updated Age for this record:");
 			       scanf("%d",&(ptr.age));
 			       break;
 	    		case 3:
-			       printf("Enter the updated Sex:");
+			       printf("Enter the updated Sex for this record:");
 			       scanf("%c",&(ptr.sex));
 			       break;
 	    		case 4:
-			       printf("Enter the updated Doctor name:");
+			       printf("Enter the updated Doctor name for this record:");
 			       gets(dummy);
 			       ptr.doc[strlen(ptr.doc)]=';';
 			       strcat(ptr.doc,";");
@@ -76,47 +76,47 @@ void edit(/*struct patient *ptr*/)
 			       
 			       break;
 	    		case 5:
-			       printf("Enter the updated Diagnosis of the Patient:");
+			       printf("Enter the updated Diagnosis of the Patient for this record:");
 			       gets(dummy1);
 			       strcat(ptr.diag,";");
 			       strcat(ptr.diag,dummy1);
 			       break;
 	    		case 6:
-			       printf("Enter the updated Height:");
+			       printf("Enter the updated Height for this record:");
 			       scanf("%f",&(ptr.height));
 			       break;
 	    		case 7:
-			       printf("Enter the updated Weight:");
+			       printf("Enter the updated Weight for this record:");
 			       scanf("%f",&(ptr.weight));
 			       break;
 	    		case 8:
-			       printf("Enter the updated BloodGroup of the Patient:");
+			       printf("Enter the updated BloodGroup of the Patient for this record:");
 			       gets(ptr.bgrp);
 			       break;
 	    		case 9:
-			   	printf("Updated status of the Patient:");
+			   	printf("Updated status of the Patient for this record:");
 			   	scanf("%d",&(ptr.stat));
 			   	break;
 	    		case 10:
-			   	printf("Enter the updated Bill Amount:");
+			   	printf("Enter the updated Bill Amount for this record:");
 			   	scanf("%lf",&(ptr.bill));
 			   	break;
 		    	case 11:
-		    		printf("Enter the amount deposited by the patient:");
+		    		printf("Enter the amount deposited by the patient for this record:");
 		    		scanf("%lf",&(ptr.amtdep));
 		    		break;
 		    	default:
-		    		printf("Invalid choice...Try Again!!!");
+		    		printf("Invalid choice D:...Try Again!!!");
 		    		break;
 	    	}
 	    	while((c=getchar())!='\n')
 			;
-	    	printf("Do you want to continue editing more information of the Patient? (Y/N): ");
+	    	printf("Do you want to continue editing more information of the record of Patients? (Y/N): ");
 	    	scanf("%c",&ch);
 	}while(ch=='y' || ch=='Y');
 	if(ch=='n' || ch=='N')
 	{
-	printf("Information of the patient has been updated successfully!!");
+	printf("Information of the record for this patient has been updated successfully!!");
 	}
 	FILE* fnew=fopen("edit.dat","wb");
         fseek(fptr,0,SEEK_SET);

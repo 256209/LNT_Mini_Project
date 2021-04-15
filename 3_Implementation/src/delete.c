@@ -15,7 +15,7 @@ int delete1()
 		FILE *fptr=fopen("records.dat","rb");
 		FILE* fnew=fopen("search.dat","wb");
 del:		fseek(fptr,0,SEEK_SET);
-        	printf("Enter the name of the patient whose record is to be deleted : ");
+        	printf("Enter the patient's name whose record you want to be deleted from the system : ");
             	scanf("%s",s);
             	strlower(s,s);
             	while(fread(&pat,sizeof(pat),1,fptr))
@@ -31,8 +31,8 @@ del:		fseek(fptr,0,SEEK_SET);
 		{
 			while((c=getchar())!='\n')
 				;
-			printf("\nPatient not found. Try again!\n");
-			printf("Do you want to go to main menu?(Y/N): ");
+			printf("\nPatient not found if not in unit test. Try again!\n");
+			printf("Do you want to go to main menu? if used for unit testing press Y(Y/N): ");
 			scanf("%c", &yn);
 			if(yn=='Y' || yn=='y')
 			{
@@ -47,7 +47,7 @@ del:		fseek(fptr,0,SEEK_SET);
         	fclose(fnew);
         	while((c=getchar())!='\n')
 			;
-        	printf("\nEnter the patient ID of the patient whose record is to be deleted : ");
+        	printf("\nEnter the ID of the patient whose record you want to delete : ");
         	scanf("%ld",&pid);
     	struct patient input,del;
     	FILE *fptr1;
@@ -69,6 +69,6 @@ del:		fseek(fptr,0,SEEK_SET);
     	remove(del.name);
     	remove("records.dat");
     	rename("record1.dat","records.dat");
-    	printf("\nPatient record deleted.\n");
+    	printf("\nPatient record you wanted to delete is deleted.\n");
     	return 1;
 }

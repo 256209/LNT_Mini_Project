@@ -30,7 +30,7 @@ void bgrp2(FILE *fptr, char *bg)
 		}
 	}
 	if(flag==0)
-		printf("No records found.");
+		printf("No records were found.");
 	else
 	{
 		fseek(blood, 0, SEEK_SET);
@@ -65,7 +65,7 @@ void bgrp1(FILE *fptr, char *bg)
 		}
 	}
 	if(flag==0)
-		printf("No records found.");
+		printf("No records were found.");
 	else
 	{
 		fseek(blood, 0, SEEK_SET);
@@ -79,7 +79,7 @@ void bloodgroup()
 	char c, bg[10];
 	while((c=getchar())!='\n')
 		;
-	printf("Enter blood group: ");
+	printf("Enter the blood group you want : ");
 	scanf("%s", bg);
 	printf("\n");
 	FILE *fptr = fopen("records.dat","rb");
